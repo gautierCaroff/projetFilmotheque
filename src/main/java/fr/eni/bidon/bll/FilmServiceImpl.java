@@ -6,8 +6,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 import fr.eni.bidon.Dal.FilmDao;
 import fr.eni.bidon.bo.Film;
+import org.springframework.stereotype.Service;
 
-
+@Service
 public class FilmServiceImpl implements FilmService {
 	
 	private FilmDao filmDao;

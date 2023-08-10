@@ -13,16 +13,16 @@ import fr.eni.bidon.bo.Film;
 @Controller
 public class ListeController {
 	
-	private FilmService filmeService; 
+	private FilmService filmService;
 	
 	@Autowired
-	public ListeController(FilmService filmeService) {
-		this.filmeService = filmeService;
+	public ListeController(FilmService filmService) {
+		this.filmService = filmService;
 	}
 
     @GetMapping({"/","/liste"})
     public String afficherDetail(Model modele){
-    	List<Film> films = filmeService.findList();
+    	List<Film> films = filmService.findList();
     	modele.addAttribute(films);
 
         return "liste";

@@ -7,7 +7,9 @@ import java.util.concurrent.ForkJoinPool;
 
 import fr.eni.bidon.Dal.FilmDao;
 import fr.eni.bidon.bo.Film;
+import org.springframework.stereotype.Component;
 
+@Component
 public class FilmDaoImpl implements FilmDao  {
 
 	private List<Film> films;

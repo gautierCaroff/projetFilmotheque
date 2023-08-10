@@ -1,10 +1,18 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Filmothèque</title>
 </head>
 <body>
-
+    <table>
+        <tr th:each="film:${films}">
+            <td>[[${film.titre}]]</td>
+            <td>[[${film.date}]]</td>
+            <td>[[${film.durée}]]</td>
+            <td>[[${film.synopsy}]]</td>
+        </tr>
+    </table>
 </body>
 </html>
