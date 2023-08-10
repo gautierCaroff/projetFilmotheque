@@ -14,7 +14,7 @@ public class FilmDaoImpl implements FilmDao  {
 	}
 
 	@Override
-	public Film SelectOneFilmById() {
+	public Film SelectOneFilmById(int id) {
 		// TODO Auto-generated method stub
 		return null;
 	}

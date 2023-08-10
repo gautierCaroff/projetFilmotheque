@@ -18,14 +18,14 @@ public class FilmServiceImpl implements FilmService {
 
 	@Override
 	public List<Film> findList() {
-		// TODO Auto-generated method stub
-		return null;
+		List<Film> films = filmDao.SelectAllFilm();
+		return films;
 	}
 
 	@Override
-	public Film findById() {
-		// TODO Auto-generated method stub
-		return null;
+	public Film findById(int id) {
+		Film film = filmDao.SelectOneFilmById(id);
+		return film;
 	}
 
 }

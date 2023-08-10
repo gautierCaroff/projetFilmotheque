@@ -11,7 +11,7 @@ public interface FilmService {
 	public List<Film> findList();
 	
 	// importer un film par id
-	public Film findById();
+	public Film findById(int id);
 	
 	// ajouter un film
 	

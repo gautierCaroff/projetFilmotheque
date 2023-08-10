@@ -8,7 +8,7 @@ public interface FilmDao {
 	
 	public List<Film> SelectAllFilm();
 	
-	public Film SelectOneFilmById();
+	public Film SelectOneFilmById(int id);
 	
 	
 
