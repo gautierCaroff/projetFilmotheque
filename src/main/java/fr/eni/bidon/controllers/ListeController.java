@@ -23,7 +23,7 @@ public class ListeController {
     @GetMapping({"/","/liste"})
     public String afficherDetail(Model modele){
     	List<Film> films = filmService.findList();
-    	modele.addAttribute(films);
+    	modele.addAttribute("films", films);
 
         return "liste";
     }
