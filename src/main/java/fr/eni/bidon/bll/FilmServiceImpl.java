@@ -3,10 +3,10 @@ package fr.eni.bidon.bll;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import fr.eni.bidon.Dal.FilmDao;
 import fr.eni.bidon.bo.Film;
-import org.springframework.stereotype.Service;
 
 @Service
 public class FilmServiceImpl implements FilmService {

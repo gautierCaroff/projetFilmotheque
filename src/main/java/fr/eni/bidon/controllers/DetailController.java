@@ -16,10 +16,10 @@ public class DetailController {
 	
 	@Autowired
 	public DetailController(FilmService filmeService) {
-		// TODO Auto-generated constructor stub
+		this.filmeService = filmeService;
 	}
 	
-	@GetMapping
+	@GetMapping ("/detail")
 	public String afficherDetail(@RequestParam int idFilm, Model modele) {
 		
 		// allez chercher le film
