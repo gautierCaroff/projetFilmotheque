@@ -1,10 +1,13 @@
 package fr.eni.bidon.bll;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import org.springframework.stereotype.Service;
 
 import fr.eni.bidon.bo.Film;
+import org.springframework.ui.Model;
+
 @Service
 public interface FilmService {
 	
@@ -16,6 +19,6 @@ public interface FilmService {
 	public Film findById(int id);
 	
 	// ajouter un film
-	
+	public Film addFilm(String titre, LocalDate date, int duree, String synopsy, Model modele);
 
 }

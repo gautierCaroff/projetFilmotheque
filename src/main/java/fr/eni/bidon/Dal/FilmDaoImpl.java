@@ -8,6 +8,7 @@ import java.util.concurrent.ForkJoinPool;
 import fr.eni.bidon.Dal.FilmDao;
 import fr.eni.bidon.bo.Film;
 import org.springframework.stereotype.Component;
+import org.springframework.ui.Model;
 
 @Component
 public class FilmDaoImpl implements FilmDao  {
@@ -36,6 +37,19 @@ public class FilmDaoImpl implements FilmDao  {
 		for(Film film : films){
 			if(film.getId() == id){
 				return film;
+			}
+		}
+		return null;
+	}
+
+	@Override
+	public Film addFilm(String titre, LocalDate date, int duree, String synopsy, Model modele) {
+		int id = -1;
+		for(Film film : films){
+			if(film.getId() > id){
+				id = film.getId();
+			}else {
+				this.films.add(new Film(id, titre, date, duree, synopsy));
 			}
 		}
 		return null;
