@@ -1,6 +1,8 @@
 package fr.eni.bidon.bo;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
+import java.util.List;
 
 import lombok.Data;
 
@@ -12,6 +14,7 @@ public class Film {
 	private LocalDate date;
 	private int duree; // en minutes
 	private String synopsy;
+	private List<Opinion> opinions;
 
 	public Film(int id, String titre, LocalDate date, int duree, String synopsy) {
 		this.id = id;
@@ -19,5 +22,10 @@ public class Film {
 		this.date = date;
 		this.duree = duree;
 		this.synopsy = synopsy;
+		this.opinions = new ArrayList<Opinion>();
+	}
+	
+	public void addOpinion (Opinion opinion) {
+		this.opinions.add(opinion);
 	}
 }

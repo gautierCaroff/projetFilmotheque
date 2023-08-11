@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.stereotype.Service;
 
 import fr.eni.bidon.bo.Film;
+import fr.eni.bidon.bo.Opinion;
 @Service
 public interface FilmService {
 	
@@ -17,5 +18,8 @@ public interface FilmService {
 	
 	// ajouter un film
 	
+	
+	// ajouter un avis
+	public void AddOpinion(Film film , Opinion opinion);
 
 }
