@@ -25,6 +25,5 @@ public interface FilmDao {
 	
 	public Film CreateOpinion(Film film, Opinion opinion);
 	
-	
 
 }
