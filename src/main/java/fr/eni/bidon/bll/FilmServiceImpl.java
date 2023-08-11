@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 import fr.eni.bidon.Dal.FilmDao;
 import fr.eni.bidon.bo.Film;
 import org.springframework.ui.Model;
+import fr.eni.bidon.bo.Opinion;
 
 @Service
 public class FilmServiceImpl implements FilmService {
@@ -30,6 +31,14 @@ public class FilmServiceImpl implements FilmService {
 		Film film = filmDao.SelectOneFilmById(id);
 		return film;
 	}
+
+	@Override
+	public void AddOpinion(Film film, Opinion opinion) {
+		filmDao.CreateOpinion(film, opinion);
+
+	}
+
+
 
 	@Override
 	public Film addFilm(Film film) {

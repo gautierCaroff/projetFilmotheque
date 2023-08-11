@@ -5,11 +5,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.SessionAttributes;
 
 import fr.eni.bidon.bll.FilmService;
 import fr.eni.bidon.bo.Film;
 
 @Controller
+@SessionAttributes({"film"})
 public class DetailController {
 	
 	private FilmService filmeService; 
@@ -29,5 +31,7 @@ public class DetailController {
 		
 		return "detail";
 	}
+	
+	
 
 }

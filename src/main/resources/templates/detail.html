@@ -8,6 +8,27 @@
 	<h1> Detail du film</h1>
 	
 	<h2 th:text="${film.titre}"></h2>
+	
+	
+        <h3>[[${film.date}]]</h3>
+        <h3>[[${film.duree}]]</h3>
+        <h3>[[${film.synopsy}]]</h3>
+        
+        <table>
+        	<th>Les avis des membres:</th>
+		    <tr th:each="opinion:${film.opinions}"> 
+		    
+		        <td>[[${opinion.rating}]]</td>
+		        <td>[[${opinion.opinion}]]</td>
+		        
+		        		       
+		    </tr>
+		    
+		</table>
+		
+					<a href="/ajouterAvis">
+		                <button>Ajouter un avis</button>
+		            </a>
 
 </body>
 </html>
