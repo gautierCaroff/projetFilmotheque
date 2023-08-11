@@ -19,6 +19,6 @@ public interface FilmService {
 	public Film findById(int id);
 	
 	// ajouter un film
-	public Film addFilm(String titre, LocalDate date, int duree, String synopsy, Model modele);
+	public Film addFilm(Film film);
 
 }

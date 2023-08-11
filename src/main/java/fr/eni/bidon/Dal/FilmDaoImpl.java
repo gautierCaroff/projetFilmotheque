@@ -43,16 +43,13 @@ public class FilmDaoImpl implements FilmDao  {
 	}
 
 	@Override
-	public Film addFilm(String titre, LocalDate date, int duree, String synopsy, Model modele) {
-		int id = -1;
-		for(Film film : films){
-			if(film.getId() > id){
-				id = film.getId();
-			}else {
-				this.films.add(new Film(id, titre, date, duree, synopsy));
-			}
-		}
-		return null;
+	public void addFilm(Film film) {
+		int id = films.stream()
+				.mapToInt(Film::getId)
+				.max()
+				.orElse(-1);
+
+		this.films.add(new Film(id +1, film.getTitre(), film.getDate(), film.getDuree(), film.getSynopsy()));
 	}
 
 }

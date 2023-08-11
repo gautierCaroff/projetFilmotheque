@@ -32,8 +32,8 @@ public class FilmServiceImpl implements FilmService {
 	}
 
 	@Override
-	public Film addFilm(String titre, LocalDate date, int duree, String synopsy, Model modele) {
-//		Film film = filmDao.SelectOneFilmById(id);
+	public Film addFilm(Film film) {
+		filmDao.addFilm(film);
 		return null;
 	}
 

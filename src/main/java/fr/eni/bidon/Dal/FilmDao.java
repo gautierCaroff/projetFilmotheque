@@ -14,7 +14,7 @@ public interface FilmDao {
 	
 	public Film SelectOneFilmById(int id);
 
-	public Film addFilm(String titre, LocalDate date, int duree, String synopsy, Model modele);
+	public void addFilm(Film film);
 	
 	
 
