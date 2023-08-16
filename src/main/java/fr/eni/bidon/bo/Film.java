@@ -1,7 +1,7 @@
 package fr.eni.bidon.bo;
 
 
-import java.time.LocalDate;
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -23,7 +23,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Film {
+
+public class Film implements Serializable {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -41,6 +42,7 @@ public class Film {
 
 	@NotBlank(message = "le Synopsy ne peu pas être vide")
 	private String synopsy;
+	
 	private Genre genre;
 	
 	
@@ -48,17 +50,6 @@ public class Film {
 	private List<Participant> acteurs;
 	
 	private List<Avis> avis;
-	
-	
-
-	public Film(int id, String titre, int annee, int duree, String synopsy) {
-		this.id = id;
-		this.titre = titre;
-		this.annee = annee;
-		this.duree = duree;
-		this.synopsy = synopsy;
-		this.avis = new ArrayList<Avis>();
-	}
 	
 	public void addOpinion (Avis opinion) {
 		this.avis.add(opinion);
