@@ -1,6 +1,9 @@
 package fr.eni.bidon.bll;
 
 import java.util.ArrayList;
+
+import java.time.LocalDate;
+
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,9 +11,13 @@ import org.springframework.stereotype.Service;
 
 import fr.eni.bidon.Dal.FilmDao;
 import fr.eni.bidon.bo.Film;
+
 import fr.eni.bidon.bo.Genre;
 import fr.eni.bidon.bo.Participant;
 import fr.eni.bidon.bo.Avis;
+
+import org.springframework.ui.Model;
+
 
 @Service
 public class FilmServiceImpl implements FilmService {
@@ -72,9 +79,16 @@ public class FilmServiceImpl implements FilmService {
 		// TODO Auto-generated method stub
 		
 	}
+
+	@Override
+	public Film addFilm(Film film) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 
 	
+
 
 }

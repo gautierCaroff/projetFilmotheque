@@ -1,5 +1,6 @@
 package fr.eni.bidon.Dal;
 
+import java.time.LocalDate;
 import java.util.List;
 
 import fr.eni.bidon.bo.Film;
@@ -11,6 +12,7 @@ import fr.eni.bidon.bo.Avis;
 
 
 import org.springframework.stereotype.Service;
+import org.springframework.ui.Model;
 
 @Repository
 public interface FilmDao {
@@ -18,9 +20,10 @@ public interface FilmDao {
 	public List<Film> SelectAllFilm();
 	
 	public Film SelectOneFilmById(int id);
+
+	public void addFilm(Film film);
 	
 	public Film CreateOpinion(Film film, Avis opinion);
-	
 	
 
 }
