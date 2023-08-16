@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1> Detail du film</h1>
+	
+	<h2 th:text="${film.titre}"></h2>
+	
+		<div class="row col-6 oddset-3" th:object="${film}">
+
+
+			<div class="mb-3">
+				<label for="titre" class="form-label"> titre : </label>
+				<input type="text" class="form-control" id="titre" th:field="*{titre}">
+			</div>
+
+			<div class="mb-3">
+				<label for="annee" class="form-label"> Année : </label>
+				<input type="text" class="form-control" id="annee" th:field="*{annee}">
+			</div>
+
+			<div class="mb-3">
+				<label for="duree" class="form-label"> Durée : </label>
+				<input type="text" class="form-control" id="duree" th:field="*{duree}">
+			</div>
+
+			<div class="mb-3">
+				<label for="synopsy" class="form-label"> synopsis : </label>
+				<input type="text" class="form-control" id="synopsy" th:field="*{synopsy}">
+			</div>
+
+			<div class="mb-3">
+				<label for="genre" class="form-label"> Genre : </label>
+				<input type="text" class="form-control" id="genre" th:field="*{genre.libelle}">
+			</div>
+
+			<div class="mb-3">
+				<label for="realisateur" class="form-label"> réalisateur : </label>
+				<input type="text" class="form-control" id="realisateur" th:value="*{realisateur.nom}">
+			</div>
+
+			<div class="mb-3">
+				<label for="annee" class="form-label"> acteur : </label>
+				<select class="form-control" id="acteurs" multiple>
+					<option th:each="acteur: ${film.acteurs}" th:value="${acteur.nom+'''acteur.prenom'}"></option>
+
+				</select>
+
+			</div>
+
+
+
+		</div>
+
+	
+        
+		
+					<a href="/ajouterAvis">
+		                <button>Ajouter un avis</button>
+		            </a>
+
+</body>
+</html>

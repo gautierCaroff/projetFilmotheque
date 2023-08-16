@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 
 import fr.eni.bidon.bll.FilmService;
 import fr.eni.bidon.bo.Film;
-import fr.eni.bidon.bo.Opinion;
+import fr.eni.bidon.bo.Avis;
 import jakarta.validation.Valid;
 
 
@@ -39,14 +39,14 @@ private FilmService filmService;
 			return "liste";
 				
 		}   
-		modele.addAttribute("opinion", new Opinion(0, 0, null));
+//		modele.addAttribute("opinion", new Avis(0, 0, null));
 		
         return "addOpinion";
     }
     
     @PostMapping("/ajouterAvis")
     public String validerAjouterOpinion(
-    		@Valid @ModelAttribute("opinion") Opinion opinion,
+    		@Valid @ModelAttribute("opinion") Avis opinion,
     		BindingResult validationResult,
     		Model modele){
     	

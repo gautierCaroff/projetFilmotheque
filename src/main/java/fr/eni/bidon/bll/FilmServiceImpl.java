@@ -1,5 +1,6 @@
 package fr.eni.bidon.bll;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -7,34 +8,72 @@ import org.springframework.stereotype.Service;
 
 import fr.eni.bidon.Dal.FilmDao;
 import fr.eni.bidon.bo.Film;
-import fr.eni.bidon.bo.Opinion;
+import fr.eni.bidon.bo.Genre;
+import fr.eni.bidon.bo.Participant;
+import fr.eni.bidon.bo.Avis;
 
 @Service
 public class FilmServiceImpl implements FilmService {
-	
-	private FilmDao filmDao;
 	@Autowired
-	public FilmServiceImpl(FilmDao filmDao) {
-		this.filmDao = filmDao;
+	private FilmDao filmDao;
+	
+	List<Film> lstFilms = new ArrayList<Film>();
+	List<Genre> lstGenre = new ArrayList<Genre>();
+	List<Participant> lstParticipants = new ArrayList<Participant>();
+
+	@Override
+	public List<Film> getAllFilm() {
+		
+		return lstFilms;
 	}
 
 	@Override
-	public List<Film> findList() {
-		List<Film> films = filmDao.SelectAllFilm();
-		return films;
+	public Film getFilmById(Long id) {
+		for (Film film : lstFilms) {
+			if (film.getId()==id) {
+				return film;	
+			}	
+		}
+		return null;
 	}
 
 	@Override
-	public Film findById(int id) {
-		Film film = filmDao.SelectOneFilmById(id);
-		return film;
+	public List<Genre> getGenres() {
+		
+		return lstGenre;
 	}
 
 	@Override
-	public void AddOpinion(Film film, Opinion opinion) {
-		filmDao.CreateOpinion(film, opinion);
+	public List<Participant> getParticipants() {
+		
+		return lstParticipants;
+	}
+
+	@Override
+	public Genre getGenrebyId(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public Participant getParticipantById(long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void saveFilm(Film film) {
+		lstFilms.add(film);
 		
 	}
+
+	@Override
+	public void AddOpinion(Film film, Avis opinion) {
+		// TODO Auto-generated method stub
+		
+	}
+	
+	
 
 	
 

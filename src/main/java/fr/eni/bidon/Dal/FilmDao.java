@@ -7,7 +7,7 @@ import fr.eni.bidon.bo.Film;
 
 import org.springframework.stereotype.Repository;
 
-import fr.eni.bidon.bo.Opinion;
+import fr.eni.bidon.bo.Avis;
 
 
 import org.springframework.stereotype.Service;
@@ -19,7 +19,7 @@ public interface FilmDao {
 	
 	public Film SelectOneFilmById(int id);
 	
-	public Film CreateOpinion(Film film, Opinion opinion);
+	public Film CreateOpinion(Film film, Avis opinion);
 	
 	
 

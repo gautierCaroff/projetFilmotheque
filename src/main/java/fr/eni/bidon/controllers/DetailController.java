@@ -25,9 +25,9 @@ public class DetailController {
 	public String afficherDetail(@RequestParam int idFilm, Model modele) {
 		
 		// allez chercher le film
-		Film film = filmeService.findById(idFilm);
+//		Film film = filmeService.getFilmById(idFilm);
 		// le metre dans le model
-		modele.addAttribute("film", film);
+//		modele.addAttribute("film", film);
 		
 		return "detail";
 	}
