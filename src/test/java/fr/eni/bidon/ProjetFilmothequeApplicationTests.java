@@ -45,21 +45,25 @@ class ProjetFilmothequeApplicationTests {
 		Participant acteur1 = new Participant();
 		acteur1.setNom("Attenborough");
 		acteur1.setPrenom("Richard");
+		em.persist(acteur1);
 
 		Participant realisateur1 = new Participant();
 		realisateur1.setNom("Spielberg");
 		realisateur1.setPrenom("Steven");
+		em.persist(realisateur1);
+
 
 		Genre genreAction = new Genre();
 		genreAction.setLibelle("Action");
+		em.persist(genreAction);
 
 		Film film1 = new Film();
 		film1.setTitre("jurasique");
 		film1.setAnnee(1993);
 		film1.setDuree(128);
 		film1.setSynopsy("un résumé");
-		film1.setActeurs(acteur1.getId());
-		film1.setRealisateur(realisateur1.getId());
+//		film1.setActeurs((List<Participant>) acteur1);
+		film1.setRealisateur(realisateur1);
 		film1.setGenre(genreAction);
 
 		em.persist(film1);
