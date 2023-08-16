@@ -2,7 +2,7 @@ package fr.eni.bidon.controllers;
 
 import fr.eni.bidon.bll.FilmService;
 import fr.eni.bidon.bo.Film;
-import fr.eni.bidon.bo.Opinion;
+//import fr.eni.bidon.bo.Opinion;
 import jakarta.validation.Valid;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

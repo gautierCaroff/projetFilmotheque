@@ -21,19 +21,19 @@ public class FilmDaoImpl implements FilmDao  {
 		this.films = new ArrayList<>();
 
 		
-		Film film = new Film(1, "Le Roi Lion",1994, 88, "L'histoire d'un jeune lion qui devient roi.");
-//		Avis opinion = new Avis(1, 5, "bien");
-//		film.addOpinion(opinion);
-//		Avis opinion2 = new Avis(1, 2, "pas bien");
-//		film.addOpinion(opinion2);
-		this.films.add(film);
-
-		this.films.add(new Film(1, "Le Roi Lion", 1994, 88, "L'histoire d'un jeune lion qui devient roi."));
-		
-		
-		
-		this.films.add(new Film(2, "Forrest Gump", 1994, 142, "L'histoire d'un homme avec un QI faible et ses aventures à travers le 20ème siècle."));
-		this.films.add(new Film(3, "Avatar", 2009, 162, "Un ex-marine est envoyé sur une planète extraterrestre et se retrouve au cœur d'un conflit."));
+//		Film film = new Film(1, "Le Roi Lion",1994, 88, "L'histoire d'un jeune lion qui devient roi.");
+////		Avis opinion = new Avis(1, 5, "bien");
+////		film.addOpinion(opinion);
+////		Avis opinion2 = new Avis(1, 2, "pas bien");
+////		film.addOpinion(opinion2);
+//		this.films.add(film);
+//
+//		this.films.add(new Film(1, "Le Roi Lion", 1994, 88, "L'histoire d'un jeune lion qui devient roi."));
+//
+//
+//
+//		this.films.add(new Film(2, "Forrest Gump", 1994, 142, "L'histoire d'un homme avec un QI faible et ses aventures à travers le 20ème siècle."));
+//		this.films.add(new Film(3, "Avatar", 2009, 162, "Un ex-marine est envoyé sur une planète extraterrestre et se retrouve au cœur d'un conflit."));
 
 	}
 
@@ -71,7 +71,7 @@ public class FilmDaoImpl implements FilmDao  {
 				.max()
 				.orElse(-1);
 
-		this.films.add(new Film(id +1, film.getTitre(), film.getAnnee(), film.getDuree(), film.getSynopsy()));
+//		this.films.add(new Film(id +1, film.getTitre(), film.getAnnee(), film.getDuree(), film.getSynopsy()));
 	}
 
 }
